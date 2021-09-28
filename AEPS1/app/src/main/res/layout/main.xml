@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/widget0"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:layout_gravity="top"
+    tools:context="com.Access.UID.AccessFM2xx" >
+
+    <ImageView
+        android:id="@+id/widget_background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription=" "
+        android:src="@drawable/widget_bg_shape"
+        tools:ignore="HardcodedText" />
+
+
+    <ImageButton
+        android:id="@+id/discB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="Disconnect"
+        android:enabled="false"
+        android:src="@drawable/disconnect"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/connectB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:contentDescription="Connect Sensor"
+        android:enabled="false"
+        android:src="@drawable/connect"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/captureB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:contentDescription="Snap OF Finger"
+        android:enabled="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/snap"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/enrlID"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/discB"
+        android:gravity="center"
+        android:background="@android:color/background_light"
+        android:autoText="false"
+        android:enabled="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="ID Number"
+        android:textColor="@android:color/black"
+        android:singleLine="true"
+        android:editable="true"
+        android:maxLength="8" />
+
+    <ImageButton
+        android:id="@+id/enrollB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/captureB"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="Enroll Finger"
+        android:layout_marginTop="7dp"
+        android:enabled="false"
+        android:src="@drawable/enroll"
+        android:visibility="visible"
+        tools:ignore="HardcodedText" />
+
+    <ImageButton
+        android:id="@+id/verifyB"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/captureB"
+        android:layout_marginTop="7dp"
+        android:layout_alignParentRight="true"
+        android:contentDescription="Verify Finger"
+        android:enabled="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/verify"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/verifyB"
+        android:gravity="center"
+        android:text="@string/TextView"
+        android:textSize="25sp" />
+
+    <AnalogClock
+        android:id="@+id/analogClock1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/message"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/test_image" />
+
+    <ImageView
+        android:id="@+id/test_image"
+        android:layout_width="255dp"
+        android:layout_height="312dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/analogClock1"
+        android:contentDescription="Finger Image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fingerprint"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/myTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/analogClock1"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/test_image"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center"
+        android:text="Time&amp;Date"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="20sp"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>
